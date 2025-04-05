@@ -1,0 +1,273 @@
+@charset "UTF-8"
+
+html{
+    font-size: 100%;
+}
+
+body{
+    color:black;
+    margin: 0;
+    padding: 0;
+}
+
+a{
+    text-decoration: none;
+}
+
+.wrapper{
+    text-align: center;
+    max-width: 1440px;
+}
+
+#header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    top: 0;            
+    left: 0;           
+    width: 100%;       
+    position: fixed;
+    background-color: black;
+    z-index: 10;          /* ← 画像より前面に */
+    height: 80px;         /* ← 明示的に高さ決めると良い */
+}
+
+#header img{
+    width: 75px;
+    height: auto;
+    display: block;
+    padding-left: 100px
+}
+
+#header li{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+
+#header ul{
+    display: flex;
+    font-size: 30px;
+    gap: 30px;
+    padding-right: 100px;
+}
+
+#header li a{
+    color:white;
+}
+
+#header li a:hover{
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+--------------------------------------------------------- /*以下コンテンツ*/-------------------------------------
+/*mainvisual*/
+#mainvisual{
+    position: relative;
+}
+  
+#mainvisual{
+    width: 50%;
+    height: auto;
+    display: block;
+}
+
+#mainvisual img:first-of-type{
+    width: 98.8vw;        /* 画面の幅（Viewport Width）に合わせる */
+    height: auto;        /* 縦横比を保って高さを自動調整 */
+    display: block;      /* 下の余白をなくすために block に */
+}
+  
+#mainvisual .overlay{
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;         /* 必要に応じてサイズ調整 */
+    height: auto;
+    z-index: 1;
+}
+
+/*about*/
+#about .section-title{
+    padding-top: 2%;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+#about .content{
+    display: flex;
+    gap: 70px;
+    justify-content: center;    /* 横方向に中央 */
+    align-items: center;        /* 縦方向に中央 */
+    padding-left: 200px;
+}
+
+#about .content-title{
+    font-size: 35px;
+    font-weight: bold;
+}
+  
+#about .content img{
+    height: auto;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover; /* 中央をトリミングして表示 */
+}
+  
+  #about .text{
+    max-width: 600px;
+    text-align: left;
+}
+
+
+/*skill*/
+#Skill{
+    background-color: black;
+}
+
+#Skill .section-title{
+    color: white;
+    padding-top: 2%;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+#Skill ul{
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    padding: 3% 13%;
+    margin: 0;
+}
+  
+#Skill li{
+    flex: 1;
+    list-style: none;
+    text-align: center;
+}
+
+#Skill li:first-of-type{
+    background-color:#383838;
+}
+
+#Skill li:nth-of-type(2){
+    background-color:rgb(54, 54, 78);
+}
+
+#Skill li:nth-of-type(3){
+    background-color:rgb(38, 38, 83);
+}
+  
+#Skill img{
+    width: 100px;
+    height: auto;
+    padding-top: 10%;
+}
+  
+#Skill .content-title{
+    font-size:25px;
+    margin-bottom: 10px;
+    color:white;
+}
+  
+#Skill p{
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color:white
+}
+
+
+/*Works*/
+#Works .section-title{
+    font-size: 30px;
+    padding-top: 2%;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+#Works .content-title{
+    color:black;
+    font-size: 20px;
+}
+
+#Works ul{
+    display: flex;
+    justify-content: space-between;
+    padding-left: 10%;
+    padding-right: 10%;
+    list-style: none;
+}
+
+#Works img{
+    width: 300px;
+    height: auto;
+    padding-bottom: 10px;
+}
+
+/*Contact*/
+#contact .section-title{
+    color:black;
+    font-size: 30px;
+    padding-top: 2%;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+#contact .text{
+    font-size: 20px;
+}
+
+#contact .contact-form{
+    display:flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.contact-form label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;             /* 入力欄を幅いっぱいに */
+  box-sizing: border-box;
+}
+
+#contact .contact-form button{
+    padding: 10px;
+    font-size: 1rem;
+    background-color: black;
+    color:white;
+    transition: opacity 0.3s ease;
+}
+
+#contact .contact-form button:hover{
+    opacity: 0.8;
+}
+
+/*以下フッター*/
+#footer ul{
+    list-style: none;
+    padding-top: 7%;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+#footer img{
+    width: 40px;
+    height: auto;
+}
