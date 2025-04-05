@@ -271,3 +271,98 @@ a{
     width: 40px;
     height: auto;
 }
+
+
+/* -------------------------------------
+   レスポンシブ対応（スマホ用 〜768px）
+------------------------------------- */
+@media screen and (max-width: 768px) {
+    /* ヘッダー調整 */
+    #header {
+      flex-direction: column;
+      height: auto;
+      padding: 10px 0;
+    }
+  
+    #header img {
+      padding-left: 0;
+      margin-bottom: 10px;
+    }
+  
+    #header ul {
+      flex-direction: column;
+      padding-right: 0;
+      gap: 10px;
+    }
+  
+    /* メインビジュアル */
+    #mainvisual {
+      width: 100%;
+      padding-top: 80px;
+    }
+  
+    #mainvisual img:first-of-type {
+      width: 100%;
+    }
+  
+    .overlay {
+      width: 60%;
+    }
+  
+    /* Aboutセクション */
+    #about .content {
+      flex-direction: column;
+      padding-left: 0;
+      gap: 30px;
+    }
+  
+    #about .content img {
+      width: 70%;
+      height: auto;
+    }
+  
+    #about .text {
+      text-align: center;
+    }
+  
+    /* Skillセクション */
+    #Skill ul {
+      flex-direction: column;
+      padding: 0 5%;
+      gap: 20px;
+    }
+  
+    #Skill li {
+      width: 100%;
+    }
+  
+    /* Worksセクション */
+    #Works ul {
+      flex-direction: column;
+      padding: 0 5%;
+      gap: 30px;
+    }
+  
+    #Works img {
+      width: 100%;
+    }
+  
+    /* フッター */
+    #footer ul {
+      flex-direction: column;
+      gap: 20px;
+      padding-top: 5%;
+    }
+  
+    /* フォーム */
+    #contact .contact-form {
+      width: 90%;
+      max-width: 400px;
+    }
+  
+    .contact-form input,
+    .contact-form textarea {
+      font-size: 1rem;
+    }
+  }
+  
